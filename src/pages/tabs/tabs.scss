@@ -1,0 +1,34 @@
+page-tabs {
+  .my-tabs {
+    & a:nth-child(2) {
+
+      ion-icon, span {
+        display: none;
+      }
+
+      &[aria-selected=true]::before {
+        filter: grayscale(0);
+        transform:rotate(0deg);
+      }
+
+      &::before {
+        transform:rotate(360deg);
+        transition: all .3s;
+        filter: grayscale(100%);
+        content: '产品去死';
+        color: transparent;
+        display: block;
+        position: fixed;
+        z-index: 9;
+        bottom: 6px;
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        box-shadow: 0 0 3px #000;
+        background-size: 60px 60px;
+        background-color: #fff;
+        background-image: url(https://yt3.ggpht.com/-iM-7BFUmSpU/AAAAAAAAAAI/AAAAAAAAAAA/vhZi5eqEyoU/s900-c-k-no-mo-rj-c0xffffff/photo.jpg);
+      }
+    }
+  }
+}
